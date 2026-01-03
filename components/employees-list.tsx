@@ -2,13 +2,15 @@
 
 import { useState, useMemo } from "react"
 import Link from "next/link"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { mockEmployees } from "@/lib/mock-data"
 import { Mail, Phone, Search, Plus, Filter, Users, Building, Calendar } from "lucide-react"
+import { PhotoUpload } from "@/components/photo-upload"
+import { AddEmployee } from "@/components/add-employee"
 
 import type { User } from "@/lib/auth-context"
 
@@ -17,6 +19,7 @@ export function EmployeesList() {
   const [departmentFilter, setDepartmentFilter] = useState("all")
   const [statusFilter, setStatusFilter] = useState("all")
   const [sortBy, setSortBy] = useState("name")
+  const [showAddEmployee, setShowAddEmployee] = useState(false)
   
   // Get all employees: mock data + newly registered users (with unique IDs)
   const allEmployees = useMemo(() => {
@@ -206,7 +209,10 @@ export function EmployeesList() {
           </div>
         </div>
         
-        <Button className="gap-2 bg-black hover:bg-gray-800">
+        <Button 
+          onClick={() => setShowAddEmployee(true)}
+          className="gap-2 bg-green-600 hover:bg-green-700 text-white"
+        >
           <Plus className="w-4 h-4" />
           Add Employee
         </Button>
@@ -242,9 +248,15 @@ export function EmployeesList() {
             <CardContent className="pt-6">
               <div className="flex items-start justify-between mb-4">
                 <div className="flex items-center gap-3 flex-1">
-                  <div className="w-12 h-12 rounded-full bg-black flex items-center justify-center text-white font-bold">
-                    {emp.name.charAt(0)}
-                  </div>
+                  <PhotoUpload
+                    currentPhoto={emp.profilePicture}
+                    employeeId={emp.employeeId}
+                    onPhotoUpdate={(newPhoto) => {
+                      // Update the employee's photo in the local state
+                      emp.profilePicture = newPhoto
+                    }}
+                    size="sm"
+                  />
                   <div className="flex-1 min-w-0">
                     <h3 className="font-semibold text-sm truncate text-black">{emp.name}</h3>
                     <p className="text-xs text-gray-600 truncate">{emp.position}</p>
@@ -319,6 +331,18 @@ export function EmployeesList() {
             )}
           </CardContent>
         </Card>
+      )}
+      
+      {/* Add Employee Modal */}
+      {showAddEmployee && (
+        <AddEmployee
+          onClose={() => setShowAddEmployee(false)}
+          onSuccess={() => {
+            setShowAddEmployee(false)
+            // Refresh the employee list
+            window.location.reload()
+          }}
+        />
       )}
     </div>
   )

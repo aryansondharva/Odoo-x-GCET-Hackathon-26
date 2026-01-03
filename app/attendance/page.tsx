@@ -82,19 +82,19 @@ export default function AttendancePage() {
   const getStatusBadge = (status: string) => {
     const variants: Record<string, { color: string; icon: React.ReactNode }> = {
       present: {
-        color: "bg-green-100 text-green-800 border-green-200",
+        color: "bg-green-100 text-black border-green-200",
         icon: <CheckCircle2 className="w-4 h-4" />,
       },
       absent: {
-        color: "bg-green-100 text-green-800 border-green-200",
+        color: "bg-green-100 text-black border-green-200",
         icon: <XCircle className="w-4 h-4" />,
       },
       "half-day": {
-        color: "bg-yellow-100 text-yellow-800 border-yellow-200",
+        color: "bg-yellow-100 text-black border-yellow-200",
         icon: <Clock3 className="w-4 h-4" />,
       },
       leave: {
-        color: "bg-blue-100 text-blue-800 border-blue-200",
+        color: "bg-blue-100 text-black border-blue-200",
         icon: <Calendar className="w-4 h-4" />,
       },
     }
@@ -123,7 +123,7 @@ export default function AttendancePage() {
                 <SelectItem value="list">List</SelectItem>
               </SelectContent>
             </Select>
-            <Button className="bg-black hover:bg-gray-800 text-white">
+            <Button className="bg-green-600 hover:bg-green-700 text-white">
               Mark Attendance
             </Button>
           </div>
@@ -187,11 +187,11 @@ export default function AttendancePage() {
 
         {/* Enhanced Statistics Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-          <Card className="bg-white border-gray-200">
+          <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-                  <CheckCircle2 className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <CheckCircle2 className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Present</p>
@@ -201,11 +201,11 @@ export default function AttendancePage() {
             </CardContent>
           </Card>
           
-          <Card className="bg-white border-gray-200">
+          <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
-                  <XCircle className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <XCircle className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Absent</p>
@@ -215,11 +215,11 @@ export default function AttendancePage() {
             </CardContent>
           </Card>
           
-          <Card className="bg-white border-gray-200">
+          <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-yellow-500 rounded-lg flex items-center justify-center">
-                  <Clock3 className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+                  <Clock3 className="w-5 h-5 text-yellow-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Half Day</p>
@@ -229,11 +229,11 @@ export default function AttendancePage() {
             </CardContent>
           </Card>
           
-          <Card className="bg-white border-gray-200">
+          <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-                  <TrendingUp className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
+                  <TrendingUp className="w-5 h-5 text-green-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Attendance Rate</p>
@@ -243,11 +243,11 @@ export default function AttendancePage() {
             </CardContent>
           </Card>
           
-          <Card className="bg-white border-gray-200">
+          <Card className="bg-white border-gray-200 shadow-sm hover:shadow-md transition-shadow">
             <CardContent className="pt-6">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-black rounded-lg flex items-center justify-center">
-                  <Users className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center">
+                  <Users className="w-5 h-5 text-gray-600" />
                 </div>
                 <div>
                   <p className="text-sm text-gray-600">Total Days</p>
@@ -260,7 +260,11 @@ export default function AttendancePage() {
 
         {/* Calendar View */}
         {viewMode === "calendar" && (
-          <Card className="border-gray-200 bg-white">
+          <Card className="border-gray-200 bg-white shadow-sm">
+            <CardHeader className="bg-gray-50 border-b border-gray-200">
+              <CardTitle className="text-black">Attendance Calendar</CardTitle>
+              <CardDescription className="text-gray-600">{monthNames[selectedMonth]} {selectedYear}</CardDescription>
+            </CardHeader>
             <CardContent className="pt-6">
               <div className="grid grid-cols-7 gap-1">
                 {/* Weekday headers */}
@@ -307,8 +311,8 @@ export default function AttendancePage() {
 
         {/* List View */}
         {viewMode === "list" && (
-          <Card className="border-gray-200 bg-white">
-            <CardHeader>
+          <Card className="border-gray-200 bg-white shadow-sm">
+            <CardHeader className="bg-gray-50 border-b border-gray-200">
               <CardTitle className="text-black">Recent Attendance</CardTitle>
               <CardDescription className="text-gray-600">Last 20 records</CardDescription>
             </CardHeader>

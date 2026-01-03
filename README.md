@@ -1,15 +1,15 @@
-# Dayflow - Human Resource Management System
+# Talentsphere - Human Resource Management System
 
 > Modern HRMS platform built with Next.js 16, React 19, and TypeScript
 
-![Dayflow](https://img.shields.io/badge/Dayflow-HRMS-purple?style=for-the-badge)
+![Talentsphere](https://img.shields.io/badge/Talentsphere-HRMS-purple?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=for-the-badge)
 
 ## Overview
 
-Dayflow is a comprehensive Human Resource Management System that streamlines employee management, attendance tracking, leave management, and payroll processing for modern organizations.
+Talentsphere is a comprehensive Human Resource Management System that streamlines employee management, attendance tracking, leave management, and payroll processing for modern organizations.
 
 ## Quick Start
 
@@ -84,7 +84,7 @@ Authentication:
 ```bash
 # 1. Clone repository
 git clone <repository-url>
-cd dayflow-hrms
+cd talentsphere-hrms
 
 # 2. Install dependencies
 npm install
@@ -99,7 +99,7 @@ npm run dev
 ## Project Structure
 
 ```
-dayflow-hrms/
+talentsphere-hrms/
 ├── app/
 │   ├── (auth)/              # Auth routes
 │   ├── api/                 # API routes
@@ -196,9 +196,9 @@ MIT License
 
 ## Support
 
-- 🐛 Issues: [GitHub Issues](https://github.com/dayflow/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/dayflow/discussions)
+- 🐛 Issues: [GitHub Issues](https://github.com/talentsphere/issues)
+- 💬 Discussions: [GitHub Discussions](https://github.com/talentsphere/discussions)
 
 ---
 
-**Built with ❤️ by the Dayflow Team**
+**Built with ❤️ by the Talentsphere Team**

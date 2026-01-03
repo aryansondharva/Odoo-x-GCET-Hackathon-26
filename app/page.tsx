@@ -37,7 +37,7 @@ export default function Home() {
             <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">HR</span>
             </div>
-            <span className="text-xl font-bold text-black">Dayflow</span>
+            <span className="text-xl font-bold text-black">Talentsphere</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-gray-600 hover:text-black transition-colors">
@@ -228,7 +228,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <h3 className="font-semibold mb-4">Company</h3>
-              <p className="text-sm opacity-75">2024 Dayflow HRMS. All rights reserved.</p>
+              <p className="text-sm opacity-75">2024 Talentsphere HRMS. All rights reserved.</p>
             </div>
             <div>
               <h3 className="font-semibold mb-4">Product</h3>
@@ -268,7 +268,7 @@ export default function Home() {
           <div className="border-t border-gray-700 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-sm text-gray-400">
-                © 2024 Dayflow HRMS. All rights reserved.
+                © 2024 Talentsphere HRMS. All rights reserved.
               </p>
               <div className="flex gap-4">
                 <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">

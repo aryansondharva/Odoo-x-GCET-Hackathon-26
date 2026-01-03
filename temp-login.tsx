@@ -37,7 +37,7 @@ export default function Home() {
             <div className="w-8 h-8 bg-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">HR</span>
             </div>
-            <span className="text-xl font-bold text-black">Dayflow</span>
+            <span className="text-xl font-bold text-black">Talentsphere</span>
           </div>
           <nav className="hidden md:flex items-center gap-8">
             <a href="#features" className="text-gray-600 hover:text-black transition-colors">
@@ -231,7 +231,7 @@ export default function Home() {
                 <div className="w-8 h-8 bg-pink-600 rounded-lg flex items-center justify-center">
                   <span className="text-white font-bold text-sm">HR</span>
                 </div>
-                <span className="text-lg font-bold">Dayflow</span>
+                <span className="text-lg font-bold">Talentsphere</span>
               </div>
               <p className="text-gray-400 text-sm">Modern HR management system</p>
             </div>
@@ -297,7 +297,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2026 Dayflow. All rights reserved.</p>
+            <p>&copy; 2026 Talentsphere. All rights reserved.</p>
           </div>
         </div>
       </footer>
