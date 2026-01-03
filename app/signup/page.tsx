@@ -89,7 +89,7 @@ export default function SignUp() {
             <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold">HR</span>
             </div>
-            <span className="text-2xl font-bold text-black">Talentsphere</span>
+            <span className="text-2xl font-bold text-black">Dayflow</span>
           </Link>
           <h1 className="text-3xl font-bold text-black mb-2">Create Account</h1>
           <p className="text-gray-600">Join our HRMS platform</p>

@@ -75,7 +75,7 @@ export function DashboardLayout({ children, currentPage }: DashboardLayoutProps)
         href="/dashboard"
         className="p-4 font-bold text-xl bg-black text-white rounded-xl mb-6 shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-[1.02]"
       >
-        Talentsphere
+        Dayflow
       </Link>
       <nav className="space-y-1 flex-1">
         {navItems.map((item) => (

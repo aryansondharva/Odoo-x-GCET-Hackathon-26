@@ -10,7 +10,7 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Talentsphere - HRMS",
+  title: "Dayflow - HRMS",
   description: "Human Resource Management System - Every workday, perfectly aligned",
   generator: "v0.app",
   icons: {

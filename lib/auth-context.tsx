@@ -229,11 +229,11 @@ const MOCK_USERS: Record<string, User> = {
     companyName: "Tech Excellence Corp",
   },
   // Add mock employees from mock-data.ts for authentication
-  "alex.chen@talentsphere.com": {
+  "alex.chen@dayflow.com": {
     id: "emp-001",
     employeeId: "EMP001",
     name: "Alex Chen",
-    email: "alex.chen@talentsphere.com",
+    email: "alex.chen@dayflow.com",
     password: "default123",
     role: "employee",
     department: "Engineering",
@@ -244,11 +244,11 @@ const MOCK_USERS: Record<string, User> = {
     salary: 120000,
     companyName: "Tech Excellence Corp",
   },
-  "maria.garcia@talentsphere.com": {
+  "maria.garcia@dayflow.com": {
     id: "emp-002",
     employeeId: "EMP002",
     name: "Maria Garcia",
-    email: "maria.garcia@talentsphere.com",
+    email: "maria.garcia@dayflow.com",
     password: "default123",
     role: "employee",
     department: "Marketing",
@@ -259,11 +259,11 @@ const MOCK_USERS: Record<string, User> = {
     salary: 110000,
     companyName: "Tech Excellence Corp",
   },
-  "james.wilson@talentsphere.com": {
+  "james.wilson@dayflow.com": {
     id: "emp-003",
     employeeId: "EMP003",
     name: "James Wilson",
-    email: "james.wilson@talentsphere.com",
+    email: "james.wilson@dayflow.com",
     password: "default123",
     role: "employee",
     department: "Engineering",
@@ -274,11 +274,11 @@ const MOCK_USERS: Record<string, User> = {
     salary: 85000,
     companyName: "Tech Excellence Corp",
   },
-  "emily.rodriguez@talentsphere.com": {
+  "emily.rodriguez@dayflow.com": {
     id: "emp-004",
     employeeId: "EMP004",
     name: "Emily Rodriguez",
-    email: "emily.rodriguez@talentsphere.com",
+    email: "emily.rodriguez@dayflow.com",
     password: "default123",
     role: "employee",
     department: "Finance",
